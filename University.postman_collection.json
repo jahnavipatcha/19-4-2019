@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "bb43604a-3992-4a5b-9949-ee9ea4fa7861",
+		"name": "University",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "http://localhost:8005/manageprograms",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n            \"programName\": \"Python\",\n            \"description\": \"Language\",\n            \"applicantEligibility\": \"b.tech\",\n            \"duration\": \"3months\",\n            \"degreeCertificate\": \"required\"\n        }"
+						},
+						"url": {
+							"raw": "http://localhost:8005/ProgramsOffered",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"ProgramsOffered"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005/update/100001",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"scheduledProgramID\": 100003,\r\n   \"programName\":\"bigdata\",\r\n   \"location\":\"Hyderabad\",\r\n   \"startDate\":\"3/07/2019\",\r\n   \"endDate\":\"2/09/2019\",\r\n   \"sessionPerWeek\":\"7\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8005/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005/delete/100000",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \r\n   \"programName\":\"python\",\r\n   \"location\":\"Hyderabad\",\r\n   \"startDate\":\"3/07/2019\",\r\n   \"endDate\":\"2/09/2019\",\r\n   \"sessionPerWeek\":\"7\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8005/delete/100002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"delete",
+								"100002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005/addprograms",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"programName\": \"Python\",\n    \"location\": \"Hyderabad\",\n    \"startDate\": \"15/04/2019\",\n    \"endDate\": \"16/05/2019\",\n    \"sessionPerWeek\": \"10\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8005/ProgramsScheduled",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"ProgramsScheduled"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005/deleteprograms/python",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \r\n   \"programName\":\"python\",\r\n   \"location\":\"Hyderabad\",\r\n   \"startDate\":\"3/07/2019\",\r\n   \"endDate\":\"2/09/2019\",\r\n   \"sessionPerWeek\":\"7\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8005/deleteprograms/java",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"deleteprograms",
+								"java"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005/getprograms",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8005/getprograms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"getprograms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005/updateprograms",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \r\n     \"programName\":\"Bigdata\",\r\n   \"description\":\"Language type\",\r\n   \"applicantEligibility\":\"B.Tech\",\r\n   \"duration\":\"2mon\",\r\n   \"degreeCertificate\":\"IIT\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8005/updateprograms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"updateprograms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005/getParticularProgram?startDate=15/04/2019&endDate=15/05/2019",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8005/getParticularProgram?startDate=15/04/2019&endDate=15/05/2019",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"getParticularProgram"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "15/04/2019"
+								},
+								{
+									"key": "endDate",
+									"value": "15/05/2019"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005/getParticularProgram/15-04-2019/16-05-2019",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8005/ProgramsScheduledProgram/15-05-2019/16-05-2019",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"ProgramsScheduledProgram",
+								"15-05-2019",
+								"16-05-2019"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005/getapplicants/rejected/application",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8005/getapplicants/rejected/application",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"getapplicants",
+								"rejected",
+								"application"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Applicant",
+			"item": [
+				{
+					"name": "http://localhost:8005/programs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8005/ProgramsScheduled",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"ProgramsScheduled"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005/application",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \"scheduledProgramID\":100,\r\n   \"fullName\":\"Chandu\",\r\n   \"dateOfBirth\":\"22/06/1997\",\r\n   \"highestQualification\":\"B.tech\",\r\n   \"marksObtained\":\"72\",\r\n   \"goals\":\"happy life\",\r\n   \"emailID\":\"jahnavi@gmail.com\"\r\n  \r\n   \r\n   \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8005/Application",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"Application"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005/status/100",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \r\n  \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8005/getStatusApplication/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"getStatusApplication",
+								"100"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mac",
+			"item": [
+				{
+					"name": "http://localhost:8005/getapplications/100",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8005/Application/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"Application",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005//acceptorreject",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \r\n   \"fullName\":\"Chandu\",\r\n   \"dateOfBirth\":\"22/06/1997\",\r\n   \"highestQualification\":\"B.tech\",\r\n   \"marksObtained\":\"72\",\r\n   \"goals\":\"happy life\",\r\n   \"emailID\":\"jahnavi@gmail.com\",\r\n   \"status\":\"accepted\",\r\n   \"dateOfInterview\":\"22/07/2019\",\r\n   \"scheduledProgramID\":100\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8005/Application/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"Application",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005/confirmOrRejectApplication/100",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \r\n   \"fullName\":\"Chandu\",\r\n   \"dateOfBirth\":\"22/06/1997\",\r\n   \"highestQualification\":\"B.tech\",\r\n   \"marksObtained\":\"72\",\r\n   \"goals\":\"happy life\",\r\n   \"emailID\":\"jahnavi@gmail.com\",\r\n   \"status\":\"rejected\",\r\n   \"scheduledProgramID\":101\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8005/confirmOrRejectApplication/102",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"confirmOrRejectApplication",
+								"102"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
